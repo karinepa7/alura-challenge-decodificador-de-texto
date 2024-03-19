@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/logo-alura-2.png"
+      type="image/x-icon"
+    />
+    <script src="decodificador.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo_cabecalho"
+        src="/assets/logo-alura.png"
+        alt="Logo da Alura"
+      />
+    </header>
+    <main class="cabecalho">
+      <section class="containers">
+        <div class="container_1">
+          <textarea
+            name="input"
+            id="input"
+            class="container_input"
+            cols="30"
+            rows="10"
+            placeholder="Digite seu texto"
+            oninput="this.value = this.value.toLowerCase()"
+          ></textarea>
+          <div class="container_exclamacao">
+            <img src="/assets/exclamacao.png" alt="Ícone de exclamação" />Apenas
+            letras minúsculas e sem acento.
+          </div>
+          <div class="container_botoes">
+            <button
+              onclick="conteudoChat()"
+              class="botao_criptografar"
+              id="criptografar"
+            >
+              Criptografar
+            </button>
+            <button
+              onclick="conteudoChat()"
+              class="botao_descriptografar"
+              id="descriptografar"
+            >
+              Descriptografar
+            </button>
+          </div>
+        </div>
+        <div class="container_2">
+          <img
+            class="container_img_menina"
+            id="imagemMenina"
+            src="/assets/menina.png"
+            alt=""
+          />
+          <h1 id="conteudoChatH1" class="container_h1">
+            Nenhuma mensagem<br />
+            encontrada
+            <p class="container_p" id="conteudoChatP">
+              Digite um texto que você deseja<br />
+              criptografar ou descriptografar.
+            </p>
+          </h1>
+
+          <div class="resultado_copiar" id="texto"></div>
+          <button onclick="copiar()" class="botao_resultado_copiar" id="copiar">
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>Desenvolvido por @karinepa7</p>
+    </footer>
+  </body>
+</html>
